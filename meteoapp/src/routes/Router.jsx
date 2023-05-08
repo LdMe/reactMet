@@ -16,7 +16,13 @@ const Router = createBrowserRouter([
     {
         path: '/prediction',
         element: <Prediction />,
-    }
+        children: [
+            {
+                path: ':id',
+                element: <Prediction />,
+            }
+        ]
+    },
 ]);
 
 export default Router;
